@@ -13,7 +13,6 @@ describe Subscribem::AccountsController do
     end
 
     specify do
-      expect(account).to receive(:create_schema)
       post :create, :account => { :name => "First Account" },
         :use_route => :subscribem
     end
